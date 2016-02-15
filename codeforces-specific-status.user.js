@@ -19,7 +19,7 @@ function getMenu(menuClass) {
 function updateMenu(menu, contest, problem) {
 	var li = document.createElement('li');
 	var a = document.createElement('a');
-	var linkText = document.createTextNode("Status[" + contest + problem + "]");
+	var linkText = document.createTextNode("Status-" + contest + problem);
 	a.appendChild(linkText);
 	a.title = "problem specific status";
 	a.href = "http://codeforces.com/problemset/status/" + contest + "/problem/" + problem;

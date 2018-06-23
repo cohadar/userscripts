@@ -2,7 +2,8 @@
 // @name        CodeForces Specific Status
 // @namespace   cohadar
 // @description On a problem page: adds a status button to second level menu that shows submissions for that problem only.
-// @include     http://codeforces.com/problemset/problem/*/*
+// @match     http://codeforces.com/problemset/problem/*/*
+// @author       You
 // @version     1
 // @grant       none
 // ==/UserScript==

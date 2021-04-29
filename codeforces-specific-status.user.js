@@ -2,7 +2,7 @@
 // @name        CodeForces Specific Status
 // @namespace   cohadar
 // @description On a problem page: adds a status button to second level menu that shows submissions for that problem only.
-// @match     http://codeforces.com/problemset/problem/*/*
+// @match     https://codeforces.com/problemset/problem/*/*
 // @author       You
 // @version     1
 // @grant       none
@@ -23,7 +23,7 @@ function updateMenu(menu, contest, problem) {
 	var linkText = document.createTextNode("Status-" + contest + problem);
 	a.appendChild(linkText);
 	a.title = "problem specific status";
-	a.href = "http://codeforces.com/problemset/status/" + contest + "/problem/" + problem;
+	a.href = "https://codeforces.com/problemset/status/" + contest + "/problem/" + problem;
 	li.appendChild(a);
 	menu.appendChild(li);
 }
@@ -34,7 +34,7 @@ function main() {
 		alert("UserScript[Codeforces Specific Status] - Cannot find second level menu");
 		return -1;
 	}
-	var re = /http:\/\/codeforces\.com\/problemset\/problem\/(\d+)\/(\D+)[\/]?/;
+	var re = /https:\/\/codeforces\.com\/problemset\/problem\/(\d+)\/(\D+)[\/]?/;
 	var problem = re.exec(document.URL);
 	if (problem == null) {
 		alert("UserScript[Codeforces Specific Status] - Cannot parse url");
